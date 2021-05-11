@@ -6,4 +6,6 @@ RUN pio run -d .
 
 
 FROM nginx:alpine
-COPY --from=build /usr/src/app/.pio/build/esp32doit-devkit-v1/firmware.bin /usr/share/nginx/html/firmware.bin
+WORKDIR /usr/share/nginx/html
+COPY --from=build /usr/src/app/.pio/build/esp32doit-devkit-v1/firmware.bin .
+COPY /config.json .
