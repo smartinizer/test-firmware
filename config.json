@@ -1,6 +1,6 @@
 {
     "name": "Example-UseCase",
-    "firmware": "https://abc.de/firmware.bin",
+    "firmware": "https://relais.smartinizer.devzero.cloud/firmware.bin",
     "config-schema": [
       {
         "key": "relais_pin",
