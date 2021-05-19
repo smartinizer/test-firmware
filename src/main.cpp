@@ -4,10 +4,12 @@
 Smartinizer* sm;
 
 void setup() {
-  pinMode(usecase::ledPin, OUTPUT);
+  
   sm = new Smartinizer();
-  sm->register_usecase(usecase::callback);
   sm->setup();
+  usecase::loadConfig(sm->getConfigByKey("topic"), sm->getConfigByKey("ledPin"));
+  pinMode(usecase::ledPin, OUTPUT);
+  sm->register_usecase(usecase::callback);
 }
 
 

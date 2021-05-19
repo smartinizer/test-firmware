@@ -1,18 +1,18 @@
 {
-    "name": "Example-UseCase",
+    "name": "LED",
     "firmware": "https://relais.smartinizer.devzero.cloud/firmware.bin",
     "config-schema": [
       {
-        "key": "relais_pin",
-        "description": "The Pin the Relais is connected to",
+        "key": "led_pin",
+        "description": "The Pin the LED is connected to",
         "format": "^[0-9]*$",
         "default": "2"
       },
       {
-        "key": "command_on",
-        "description": "The command that will be used, to switch on the relais",
+        "key": "topic",
+        "description": "Specifies the topic that will be subscribed to",
         "format": "^[a-z]+$",
-        "default": "on"
+        "default": "command"
       }
     ]
   }
