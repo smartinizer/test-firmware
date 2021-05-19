@@ -7,7 +7,7 @@ void setup() {
   
   sm = new Smartinizer();
   sm->setup();
-  usecase::loadConfig(sm->getConfigByKey("topic"), sm->getConfigByKey("ledPin"));
+  usecase::loadConfig(sm->getConfigByKey("topic"), sm->getConfigByKey("led_pin"));
   pinMode(usecase::ledPin, OUTPUT);
   sm->register_usecase(usecase::callback);
 }
